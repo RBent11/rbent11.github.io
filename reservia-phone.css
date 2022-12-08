@@ -1,0 +1,260 @@
+
+/*! *******************************************************************************/
+/*! ***************************** GLOBAL ******************************************/
+/*! *******************************************************************************/
+
+
+section{margin: 20px;}
+
+
+/*! *******************************************************************************/
+/*! ***************************** HEADER ******************************************/
+/*! *******************************************************************************/
+
+#site-header{margin-bottom: 150px;}
+
+.onglet{
+    border-bottom: 3px solid #f2F2F2;
+    width: 50%;
+    text-align: center;
+    height: 80px;
+    color: #0065fc;
+
+  }
+
+  .onglet:hover {
+    width: 50%;
+    border-top:none;
+    border-bottom: 3px solid #0065fc;
+    height:80px;
+
+  }
+
+  .liste-nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  #navigation {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+
+/*! *******************************************************************************/
+/*! ************************* SECTION BARRE DE RECHERCHE  *************************/
+/*! *******************************************************************************/
+
+
+
+.envoyer{display: none;}
+
+.loupe{
+  display:block;
+  background-color: #0065FC; 
+  width: 50px; 
+  height: 50px; 
+  position: absolute; 
+  top:0; 
+  right: 0;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:white;
+
+} 
+
+.zone-texte-recherche{
+  position: relative;
+  border-radius:0px 16px 16px 0px;
+  width:250px;
+  height:50px
+
+}
+
+
+#information{margin: 20px;}
+
+
+/*! *******************************************************************************/
+/*! ************************* SECTION HEBERGEMENTS  *******************************/
+/*! *******************************************************************************/
+
+#hebergements-a-marseille{border-radius: 0; background-color: white;}
+
+.titre-hebergements-marseille{
+    width: 100%;
+    margin:40px 0px 10px 30px;
+    font-family: "Raleway-Medium";
+    font-size: 20px;
+    
+}
+
+
+.afficher-plus{
+    width: 100%; 
+    margin: 30px 20px 20px 30px;
+
+}
+
+.afficher-plus h4{
+    font-family: "Raleway-Black";
+}
+
+
+.galerie-hebergements{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.carte{
+    border: 6px solid white;
+    border-radius: 20px;
+    margin: 10px;
+    min-width: 330px;
+    min-height: 220px;
+    width: 330px;
+    height: 220px;
+    display: flex; 
+    align-items: flex-end;
+    background-size: 340px 180px;
+    background-repeat: no-repeat;
+    box-shadow: 5px 5px 10px #aaaaaa; 
+}
+
+
+.info-carte{
+    display: flex;
+    height: 40%;
+    width: 100%;
+    background-color:white;
+    flex-direction: column;  
+    justify-content: center;
+    border-radius: 0px 0px 0px 0px;
+    padding-left: 10px;
+}
+
+
+.titre-carte{
+    margin-bottom: 5px;
+    font-family: "Raleway-Black";
+}
+
+
+
+
+.texte-carte{
+    margin-bottom: 5px;
+}
+
+
+
+
+
+/*********************************************/
+/********** les plus populaires *************/
+/********************************************/
+
+#populaires{
+    background-color: #f2f2f2;
+    padding: 10px 0px 10px 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-radius: 0;
+    
+}
+
+#galerie-pop{justify-content: center;}
+
+.carte-pop{
+    margin: 20px 0;
+    max-width: 330px; 
+    max-height: 160px;
+    width: 330px;
+    height: 160px;
+
+}
+
+.titre-populaires h2{
+    margin:40px 0px 20px 30px;
+    font-family: "Raleway-Medium";
+    font-size: 20px;
+    
+}
+
+
+/*! *******************************************************************************/
+/*! ************************* SECTION ACTIVITES  **********************************/
+/*! *******************************************************************************/
+
+.titre-activites{
+    width: 100%;
+    margin: 30px 20px 20px 30px;
+}
+
+.galerie-activites{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.carte-activites{
+    
+    border-radius: 20px;
+    margin: 10px;
+    width: 330px;
+    height: 220px;
+    display: flex; 
+    align-items: flex-end;
+    background-size: 340px 180px;
+    background-repeat: no-repeat;
+    box-shadow: 5px 5px 10px #aaaaaa; 
+}
+
+
+
+.carte-info-activites{
+    display: flex;
+    height: 30%;
+    width: 100%;
+    background-color:white;
+    flex-direction: column;  
+    justify-content: center;
+    border-radius: 0px 0px 20px 20px;
+    padding-left: 10px;
+}
+
+
+.carte-titre-activites{
+    margin: 10px;
+    font-family: "Raleway-Bold";
+}
+
+/*! *******************************************************************************/
+/*! ************************* SECTION FOOTER  *************************************/
+/*! *******************************************************************************/
+
+#footer{
+    display: flex;
+    padding: 20px;
+    background-color: #f2f2f2;
+    flex-wrap: wrap;
+  }
+  
+#footer div{width: 300px; line-height: 30px; margin: 10px;}
+  
+#footer div h3{margin-bottom: 15px;font-family: "Raleway-Bold";}

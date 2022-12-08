@@ -1,0 +1,838 @@
+
+/*! *******************************************************************************/
+/*! ***************************** GLOBAL ******************************************/
+/*! *******************************************************************************/
+
+*{
+    height: auto;
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway";
+    outline: none; /*désactive les grosses bordures noires quand on clique sur un champ de recherche ou un bouton*/
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: "Raleway";
+    src: url("ressources/Raleway/static/Raleway-Regular.ttf");
+}
+
+@font-face{
+    font-family: "Raleway-SemiBold";
+    src: url("ressources/Raleway/static/Raleway-SemiBold.ttf");
+}
+
+@font-face{
+    font-family: "Raleway-Bold";
+    src: url("ressources/Raleway/static/Raleway-Bold.ttf");
+}
+
+@font-face{
+    font-family: "Raleway-Black";
+    src: url("ressources/Raleway/static/Raleway-Black.ttf");
+}
+
+@font-face{
+    font-family: "Raleway-ExtraLight";
+    src: url("ressources/Raleway/static/Raleway-ExtraLight.ttf");
+}
+
+@font-face{
+    font-family: "Raleway-Medium";
+    src: url("ressources/Raleway/static/Raleway-Medium.ttf");
+}
+
+@font-face{
+    font-family: "Raleway-Thin";
+    src: url("ressources/Raleway/static/Raleway-Thin.ttf");
+}
+
+
+
+li{
+    list-style: none;
+    
+}
+
+a{text-decoration: none; color:black;}
+
+section{margin: 0px 0px 20px 30px;}
+
+/*! *******************************************************************************/
+/*! ***************************** HEADER ******************************************/
+/*! *******************************************************************************/
+
+
+#site-header {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.logo-site{
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  width:90px;
+  height:45px;
+}
+
+.inscription {
+  position: absolute;
+  right: 25px;
+  top: 50px;
+  color: #0065fc;
+  font-family: "Raleway-Bold";
+}
+
+#navigation {
+  margin-right: 100px;
+}
+
+.liste-nav {
+  display: flex;
+}
+
+.onglet{
+  width: 150px;
+  text-align: center;
+  height: 100px;
+  padding-top: 50px;
+  font-size: 15px;
+}
+
+.onglet:hover{
+  width: 150px;
+  text-align: center;
+  height: 100px;
+  padding-top: 47px;
+  border-top: 3px solid #0065fc; 
+}
+
+.onglet a:hover{
+    color: #0065fc;
+}
+
+
+
+/*! *******************************************************************************/
+/*! ************************* SECTION BARRE DE RECHERCHE  *************************/
+/*! *******************************************************************************/
+
+
+
+.titre-recherche{
+    margin-bottom:15px;
+    font-family: "Raleway-Medium";
+    font-size: 20px;
+}
+
+.texte-recherche{
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+.conteneur-barre{
+    display: flex;
+    height: 50px;
+    margin-bottom: 20px;
+    position:relative;
+    
+}
+
+.logo-localisation{
+    display: flex;
+    background-color: #F2F2F2;
+    width: 50px;
+    border-radius: 16px 0px 0px 16px;
+    font-size: 16px;
+}
+
+.fa-map-marker-alt{
+    width: 40px;
+    margin:auto;
+    text-align: center;
+}
+
+.loupe{display:none;}
+
+.barre-de-recherche{
+    display: flex;
+    border-radius: 16px;
+}
+
+.zone-texte-recherche{
+    height: 50px;
+    width: 190px;
+    border: none;
+    font-size: 16px;
+    padding-left: 10px;
+    font-family: "Raleway-Bold";
+    border-radius: 0px;
+    border: 1px solid #F2F2F2;
+}
+
+.envoyer{
+    width: 130px;
+    height: 50px;
+    border: none;
+    background-color: #0065FC;
+    font-size: 16px;
+    border-radius: 0px 16px 16px 0px;
+    color: white;
+    font-family: "Raleway-Bold";
+}
+
+
+
+
+/*! *******************************************************************************/
+/*! ***************************** SECTION FILTRES  ********************************/
+/*! *******************************************************************************/
+
+
+#filtres{
+    display: flex; 
+    margin-bottom:20px; 
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#liste-filtres{
+    display:flex;
+    padding-top: 20px;  
+    flex-wrap: wrap;
+}
+
+.titre-filtre{
+    font-family: "Raleway-Medium";
+    margin-right: 20px;
+
+}
+
+.filtre{
+    height:45px;
+    position:relative;
+    display:flex;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+  
+.logo-filtre{
+    background-color: #deebff;
+    position:absolute;
+    border-radius:50%;
+    height:45px;
+    width:45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.bouton-filtre{
+    background-color:white;
+    border:none;
+    padding:0px 20px 0px 55px;
+    border: 2px solid #d9d9d9;
+    border-radius: 45px;
+    font-family: "Raleway-SemiBold";
+    font-size: 16px;
+}
+  
+.fa-money-bill-wave, .fa-child, .fa-heart, .fa-dog{
+    font-size: 20px;
+    color: #0065fc;
+}
+
+/*************************************************/
+/********** information *************************/
+/************************************************/
+
+.bulle-info{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    min-width: 25px;
+    height: 25px;
+    border:1px solid #d9d9d9;
+}
+
+.fa-info{
+    font-size: 12px;
+    color: #0065fc;
+}
+
+.texte-info{
+    margin-left: 10px;
+}
+
+.texte-info p{
+    font-family: "Raleway";
+    font-size: 16px;
+}
+
+#information{
+
+    display: flex;
+    align-items: center; 
+    margin: 0px 0px 20px 30px; 
+}
+
+
+
+/*! *******************************************************************************/
+/*! ************************* SECTION HEBERGEMENTS  *******************************/
+/*! *******************************************************************************/
+
+
+#hebergements{
+    display: flex; 
+    flex-wrap: wrap-reverse;
+    width: 95%;
+    margin-bottom: 30px;
+}
+
+.fa-star{font-size: 12px;}
+
+.etoile{display: inline-flex;}
+
+/***********************************************/
+/********** hebergement à marseille *************/
+/************************************************/
+
+#hebergements-a-marseille{
+    background-color: #f2F2F2;
+    border-radius: 30px;
+    min-width: 65%;
+    
+    
+}
+
+
+.titre-hebergements-marseille{
+    width: 100%;
+    margin:40px 0px 10px 50px;
+    font-family: "Raleway-Medium";
+    font-size: 20px;
+}
+
+
+
+
+#galerie-hebergements{
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 30%);
+    grid-column-gap: 5%;
+    grid-row-gap: 10%;
+    padding: 30px;   
+    justify-content: center;
+    
+ 
+}
+
+
+.afficher-plus{
+
+    margin: 50px 0px 0px 50px;
+    font-family: "Raleway-Bold";
+    font-size: 16px;
+    display: block;
+   
+}
+
+
+.carte{
+    border: 6px solid white;
+    border-radius: 20px;
+    min-width: 250Px;
+    max-height: 250px;
+    width: 18vw;
+    height: 24vh;
+    display: flex; 
+    align-items: flex-end;
+    background-size: 100% 100%;
+    background-clip:content-box;
+    background-position-y: -3vh;
+    background-repeat: no-repeat;
+    box-shadow: 5px 5px 10px #aaaaaa; 
+
+}
+
+
+ #galerie-hebergements .carte:nth-child(1){
+    background-image: url("ressources/Projet2-Reservia/images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg");
+    
+ }
+
+#galerie-hebergements .carte:nth-child(2){
+    background-image: url("ressources/Projet2-Reservia/images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg");  
+}
+
+#galerie-hebergements .carte:nth-child(3){
+    background-image: url("ressources/Projet2-Reservia/images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg");  
+}
+
+#galerie-hebergements .carte:nth-child(4){
+    background-image: url("ressources/Projet2-Reservia/images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg");  
+}
+
+#galerie-hebergements .carte:nth-child(5){
+    background-image: url("ressources/Projet2-Reservia/images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg");  
+}
+
+#galerie-hebergements .carte:nth-child(6){
+    background-image: url("ressources/Projet2-Reservia/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg");
+    
+
+}
+
+
+
+
+.info-carte{
+    display: flex;
+    height: 40%;
+    width: 100%;
+    background-color:white;
+    flex-direction: column;  
+    justify-content: center;
+    border-radius: 0px 0px 0px 0px;
+    padding: 10px;
+    
+}
+
+
+.titre-carte{
+    margin-bottom: 5px;
+}
+
+
+.texte-carte{
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+
+
+#galerie-hebergements .carte:nth-child(1) .etoile :nth-child(1),
+#galerie-hebergements .carte:nth-child(1) .etoile :nth-child(2),
+#galerie-hebergements .carte:nth-child(1) .etoile :nth-child(3),
+#galerie-hebergements .carte:nth-child(1) .etoile :nth-child(4),
+
+#galerie-hebergements .carte:nth-child(2) .etoile :nth-child(1),
+#galerie-hebergements .carte:nth-child(2) .etoile :nth-child(2),
+#galerie-hebergements .carte:nth-child(2) .etoile :nth-child(3),
+#galerie-hebergements .carte:nth-child(2) .etoile :nth-child(4),
+#galerie-hebergements .carte:nth-child(2) .etoile :nth-child(5),
+
+#galerie-hebergements .carte:nth-child(3) .etoile :nth-child(1),
+#galerie-hebergements .carte:nth-child(3) .etoile :nth-child(2),
+#galerie-hebergements .carte:nth-child(3) .etoile :nth-child(3),
+#galerie-hebergements .carte:nth-child(3) .etoile :nth-child(4),
+
+#galerie-hebergements .carte:nth-child(4) .etoile :nth-child(1),
+#galerie-hebergements .carte:nth-child(4) .etoile :nth-child(2),
+#galerie-hebergements .carte:nth-child(4) .etoile :nth-child(3),
+
+#galerie-hebergements .carte:nth-child(5) .etoile :nth-child(1),
+#galerie-hebergements .carte:nth-child(5) .etoile :nth-child(2),
+#galerie-hebergements .carte:nth-child(5) .etoile :nth-child(3),
+#galerie-hebergements .carte:nth-child(5) .etoile :nth-child(4),
+
+#galerie-hebergements .carte:nth-child(6) .etoile :nth-child(1),
+#galerie-hebergements .carte:nth-child(6) .etoile :nth-child(2),
+#galerie-hebergements .carte:nth-child(6) .etoile :nth-child(3),
+#galerie-hebergements .carte:nth-child(6) .etoile :nth-child(4),
+#galerie-hebergements .carte:nth-child(6) .etoile :nth-child(5)
+{
+    color: #0065FC;
+}
+
+
+#galerie-hebergements .carte:nth-child(1) .etoile :nth-child(5),
+
+#galerie-hebergements .carte:nth-child(3) .etoile :nth-child(5),
+
+#galerie-hebergements .carte:nth-child(4) .etoile :nth-child(4),
+#galerie-hebergements .carte:nth-child(4) .etoile :nth-child(5),
+
+#galerie-hebergements .carte:nth-child(5) .etoile :nth-child(5)
+{
+
+    color: #DEEBFF;
+}
+
+
+
+
+/*********************************************/
+/********** les plus populaires *************/
+/********************************************/
+
+
+#populaires{
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    align-items: center;
+    padding-bottom: 30px;
+    height: auto;
+    max-width: 30%;
+    width: 100%; 
+    margin-left: 30px;
+    min-width: min-content;
+}
+
+
+.titre-populaires{
+    width: 100%;
+    position: relative;
+}
+
+.titre-populaires i{
+    font-size: 20px;
+    position: absolute;
+    right: 50px;
+    top : 40px;
+    
+
+}
+
+.titre-populaires h2{
+    margin:40px 0px 20px 50px;
+    font-family: "Raleway-Medium";
+    font-size: 20px;
+    
+}
+
+
+
+.carte-pop{
+    border: 5px solid white;
+    border-radius: 20px;
+    margin: 20px 40px;
+    min-width: 300px;
+    width: 25vw;
+    height: 20vh;
+    display: flex; 
+    box-shadow: 5px 5px 10px #aaaaaa; 
+    flex-flow: row-reverse;
+    background-size: 50% 100%;
+    background-position-y: -1.5vh;
+    background-repeat: no-repeat; 
+}
+
+
+#populaires .carte-pop:nth-child(1){
+    background: url("ressources/Projet2-Reservia/images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg");
+    background-size: 70% 100%;
+    background-position-x: -2.5vh;
+    background-repeat: no-repeat; 
+}
+
+#populaires .carte-pop:nth-child(2){
+    background: url("ressources/Projet2-Reservia/images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg");
+    background-size: 50% 100%;
+    background-position-x: -1vh;
+    background-repeat: no-repeat; 
+}
+
+#populaires .carte-pop:nth-child(3){
+    background: url("ressources/Projet2-Reservia/images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg");
+    background-size: 40% 100%;
+    background-position-x: 0vh;
+    background-position-y: 0vh;
+    background-repeat: no-repeat; 
+}
+
+
+
+.carte-pop-info{
+    display: flex;
+    height: 100%;
+    width: 60%;
+    background-color:white;
+    flex-direction: column;  
+    border-radius: 0px 10px 10px 0px;
+    padding-left: 10px;
+
+}
+
+
+.carte-pop-titre{
+    margin: 10px 10px 20px 10px;
+    height: 10%;
+    
+}
+
+
+.carte-pop-texte{
+    margin: 10px;
+    font-size: 14px;
+}
+
+.etoile-pop{
+    display: flex;
+    height: 80%;
+    align-items: flex-end;
+    margin: 10px;  
+}
+
+#populaires .carte-pop:nth-child(1) .etoile-pop :nth-child(1),
+#populaires .carte-pop:nth-child(1) .etoile-pop :nth-child(2),
+#populaires .carte-pop:nth-child(1) .etoile-pop :nth-child(3),
+#populaires .carte-pop:nth-child(1) .etoile-pop :nth-child(4),
+#populaires .carte-pop:nth-child(1) .etoile-pop :nth-child(5),
+
+#populaires .carte-pop:nth-child(2) .etoile-pop :nth-child(1),
+#populaires .carte-pop:nth-child(2) .etoile-pop :nth-child(2),
+#populaires .carte-pop:nth-child(2) .etoile-pop :nth-child(3),
+#populaires .carte-pop:nth-child(2) .etoile-pop :nth-child(4),
+
+#populaires .carte-pop:nth-child(3) .etoile-pop :nth-child(1),
+#populaires .carte-pop:nth-child(3) .etoile-pop :nth-child(2),
+#populaires .carte-pop:nth-child(3) .etoile-pop :nth-child(3),
+#populaires .carte-pop:nth-child(3) .etoile-pop :nth-child(4)
+{
+    color: #0065FC;
+}
+
+
+#populaires .carte-pop:nth-child(2) .etoile-pop :nth-child(5),
+
+#populaires .carte-pop:nth-child(3) .etoile-pop :nth-child(5)
+{
+    color: #f2f2f2;
+}
+
+
+
+@media screen and (max-width:1380px){
+
+    #hebergements-a-marseille{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+
+    .carte{min-width: 300px; min-height: 200px;}
+
+    .afficher-plus{display: block; margin: 50px;}
+
+    #galerie-hebergements{
+        width: 100%;
+        height: 60%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; 
+        grid-gap: 30px;
+    }
+
+    #populaires{
+        padding: 10px 0px 10px 0px;
+        min-width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px 0;
+    }
+
+    #galerie-pop{
+
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 20px;
+    }
+
+    .carte-pop{
+        margin: 20px;
+    }
+}
+
+
+
+
+
+/*! *******************************************************************************/
+/*! ************************* SECTION ACTIVITES  **********************************/
+/*! *******************************************************************************/
+
+#activites{
+    width: 95%;
+}
+
+.titre-activites{
+    margin:20px 10px;
+    font-family: "Raleway-Medium";
+    font-size: 20px;
+    
+    
+}
+
+
+#galerie-activites{
+    min-height: 60vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr 0.5fr 0.5fr 1fr 1fr;
+    grid-gap: 30px;    
+}
+
+.carte-activites{
+    
+    border-radius: 20px;
+    
+    display: flex; 
+    align-items: flex-end;
+    background-size: 340px 180px;
+    background-repeat: no-repeat;
+    box-shadow: 5px 5px 10px #aaaaaa; 
+}
+
+
+
+.carte-info-activites{
+    display: flex;
+    height: 50px;
+    width: 100%;
+    background-color:white;
+    flex-direction: column;  
+    justify-content: center;
+    border-radius: 0px 0px 20px 20px;
+    padding-left: 10px;
+    
+}
+
+
+.carte-titre-activites{
+    margin: 10px;
+    font-family: "Raleway-Bold";
+}
+
+
+#galerie-activites .carte-activites:nth-child(1){
+    background-image: url("ressources/Projet2-Reservia/images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"); 
+    background-size: cover;  
+    grid-row: 1/7;
+    grid-column: 1;    
+}
+
+
+#galerie-activites .carte-activites:nth-child(2){
+    background-image: url("ressources/Projet2-Reservia/images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg");
+    background-size: cover;    
+    background-position: center;
+    grid-row:1/5;
+    grid-column: 2;    
+}
+
+#galerie-activites .carte-activites:nth-child(3){
+    background-image: url("ressources/Projet2-Reservia/images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg");  
+    background-size: cover;    
+    grid-row:5/7;
+    grid-column: 2;    
+}
+
+#galerie-activites .carte-activites:nth-child(4){
+    background-image: url("ressources/Projet2-Reservia/images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"); 
+    background-size: cover;
+    background-position: center;
+    grid-row: 1/7;
+    grid-column: 3; 
+}
+
+#galerie-activites .carte-activites:nth-child(5){
+    background-image: url("ressources/Projet2-Reservia/images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg");
+    background-size: cover;
+    grid-row:1/4;
+    grid-column: 4; 
+}
+
+#galerie-activites .carte-activites:nth-child(6){
+    background-image: url("ressources/Projet2-Reservia/images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg");  
+    background-size: cover;
+    grid-row:4/7;
+    grid-column: 4; 
+}
+
+
+@media screen and (max-width: 1100px){
+    
+    #activites{margin:0; width: 100%;}
+
+    .titre-activites{
+        width: 100%;
+        margin: 20px 0px 20px 40px;
+    }
+
+    #galerie-activites{
+        width: 100%;
+        height: 60%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .carte-activites{
+        
+        border-radius: 20px;
+        margin: 10px;
+        width: 310px;
+        height: 200px;
+        display: flex; 
+        align-items: flex-end;
+        background-size: 340px 180px;
+        background-repeat: no-repeat;
+        box-shadow: 5px 5px 10px #aaaaaa; 
+    }
+
+
+
+    .carte-info-activites{
+        display: flex;
+        height: 30%;
+        width: 100%;
+        background-color:white;
+        flex-direction: column;  
+        justify-content: center;
+        border-radius: 0px 0px 20px 20px;
+        padding-left: 10px;
+    }
+
+
+    .carte-titre-activites{
+        margin: 10px;
+        font-family: "Raleway-Bold";
+    }
+}
+
+
+
+/*! *******************************************************************************/
+/*! ************************* SECTION FOOTER  *************************************/
+/*! *******************************************************************************/
+
+
+#footer{
+    display: flex;
+    padding: 30px;
+    background-color: #f2f2f2;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 30px;
+
+}
+  
+#footer div{margin-left:30px;line-height: 30px; width: 30%;}
+  
+#footer div h3{margin-bottom: 15px;font-family: "Raleway-Bold";}
+
+
